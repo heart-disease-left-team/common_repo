@@ -1,0 +1,723 @@
+IDN.000_00.000 RECTYPE File type identifier 1-2 2 
+IDN.000_02.000 SRVY_YR Year of National Health Interview Survey 3-6 4 
+IDN.000_04.000 HHX Household Number 7-12 6 
+IDN.000_25.000 INTV_QRT Interview Quarter 13 1 
+IDN.000_30.000 INTV_MON Interview Month 14-15 2 
+IDN.000_35.000 FMX Family Number 16-17 2 
+IDN.000_40.000 FPX Person Number (Within family) 18-19 2 
+IDN.000_65.000 WTIA_SA Weight-Interim Annual 20-26 7 
+IDN.000_70.000 WTFA_SA Weight-Final Annual 27-32 6 
+UCF.000_00.000 REGION Region 33 1 
+UCF.000_00.000 STRAT_P Pseudo-stratum for public use file variance estimation 34-36 3 
+UCF.000_00.000 PSU_P Pseudo-PSU for public use file variance estimation 37-38 2 
+HHC.110_00.000 SEX Sex 39 1 
+HHC.180_00.000 HISPAN_I Hispanic subgroup detail 40-41 2 
+HHC.200_01.000 RACERPI2 OMB groups w/multiple race 42-43 2 
+HHC.200_01.000 MRACRPI2 Race coded to single/multiple race group 44-45 2 
+HHC.200_01.000 MRACBPI2 Race coded to single/multiple race group 46-47 2 
+HHC.420_00.000 AGE_P Age 48-49 2 
+FID.250_00.000 R_MARITL Marital Status 50 1 
+AID.005_00.000 PROXYSA Sample adult status 51 1 
+AID.010_00.000 PROX1 Knowledgeable proxy for Sample Adult available 52 1 
+AID.015_00.000 PROX2 Relationship of SA proxy to SA 53 1 
+AID.550_00.000 LATEINTA Late Sample Adult interviews 54 1 
+FDB.001_00.000 FDRN_FLG Disability Questions flag 55 1 
+ASD.062_00.000 DOINGLWA Corrected employment status last week 56 1 
+ASD.065_00.000 WHYNOWKA Main reason for not working last week 57-58 2 
+ASD.066_00.000 EVERWRK Ever worked 59 1 
+ASD.080_00.000 INDSTRN1 Detailed industry classification (based on 2007 NAICS-informed codes from Census) 60-61 2 
+ASD.080_00.000 INDSTRN2 Simple industry classification (based on 2007 NAICS-informed Codes from Census) 62-63 2 
+ASD.090_00.000 OCCUPN1 Detailed occupation classification (based on 2010 SOC-informed codes from Census) 64-65 2 
+ASD.090_00.000 OCCUPN2 Simple occupation classification (based on 2010 SOC-informed codes from Census) 66-67 2 
+ASD.110_00.000 WRKCATA Class of worker 68 1 
+ASD.112_00.000 BUSINC1A Current job an incorporated business 69 1 
+ASD.120_00.000 LOCALL1A Number of employees at work 70-71 2 
+ASD.140_02.000 YRSWRKPA Number of years on the job 72-73 2 
+ASD.146_00.000 WRKLONGH Current/most recent job also longest held job 74 1 
+ASD.150_00.000 HOURPDA Paid by the hour at current or most recent job 75 1 
+ASD.160_00.000 PDSICKA Paid sick leave at current or most recent job 76 1 
+ASD.170_00.000 ONEJOB Have more than one job 77 1 
+ASD.210_00.000 WRKLYR4 Work status: last week, past 12 months 78 1 
+ACN.010_00.000 HYPEV Ever been told you have hypertension 79 1 
+ACN.020_00.000 HYPDIFV Ever had hypertension on 2+ visits 80 1 
+ACN.020_00.010 HYPYR1 Had hypertension, past 12 months 81 1 
+ACN.025_00.010 CHLYR1 Had high cholesterol, past 12 months 82 1 
+ACN.031_01.000 CHDEV Ever been told you had coronary heart disease 83 1 
+ACN.031_02.000 ANGEV Ever been told you had angina pectoris 84 1
+ACN.031_03.000 MIEV Ever been told you had a heart attack 85 1 
+ACN.031_04.000 HRTEV Ever been told you had a heart condition/disease 86 1 
+ACN.031_05.000 STREV Ever been told you had a stroke 87 1 
+ACN.031_06.000 EPHEV Ever been told you had emphysema 88 1 
+ACN.035_00.000 COPDEV Ever been told you had COPD 89 1 
+ACN.040_00.010 ASPMEDEV Ever been told to take low-dose aspirin 90 1 
+ACN.040_00.020 ASPMEDAD Following low-dose aspirin advice 91 1 
+ACN.040_00.030 ASPMDMED Advised to stop taking low-dose aspirin 92 1 
+ACN.040_00.040 ASPONOWN Taking low-dose aspirin on own 93 1 
+ACN.080_00.000 AASMEV Ever been told you had asthma 94 1 
+ACN.085_00.000 AASSTILL Still have asthma 95 1 
+ACN.090_00.000 AASMYR Had an asthma episode/attack past 12 m 96 1 
+ACN.100_00.000 AASERYR1 Had visit to ER due to asthma past 12 m 97 1 
+ACN.100_00.010 AASMHSP1 Had stayed overnight in hospital due to asthma, past 12 m 98 1 
+ACN.100_00.030 AWZMSWK1 # Work days missed due to asthma, past 12 mo. 99-101 3 
+ACN.100_00.060 AASMMED1 Used oral inhaler, past 3 mo 102 1 
+ACN.100_00.065 AASMTYP Type of rescue prescription asthma medication 103 1 
+ACN.100_00.070 AASMCAN1 Used more than 3 canisters of mouth inhaler, past 3 mo 104 1 
+ACN.100_00.090 AASMDTP2 Taking preventive asthma medication 105 1 
+ACN.100_00.100 AASWMP1 Given asthma action plan 106 1 
+ACN.100_00.110 AASCLASS Ever taken asthma mgmt. class 107 1 
+ACN.105_01.010 AAS_REC Taught to recognize asthma episode 108 1 
+ACN.105_02.020 AAS_RES Taught how to respond to asthma episode 109 1 
+ACN.105_03.030 AAS_MON Taught how to monitor peak flow for daily therapy 110 1 
+ACN.107_00.010 AAPENVLN Ever advised to change environment for asthma 111 1 
+ACN.107_00.020 AAROUTIN Routine checkup for your asthma, past 12 m 112-114 3 
+ACN.107_00.030 AASYMPT Last doctor visit, asked how often…had asthma symptoms 115 1 
+ACN.107_00.040 AARESCUE Last doctor visit, asked how often…used quick relief inhaler 116 1 
+ACN.107_00.050 AAACTLIM Last doctor visit, asked how often…asthma symptoms limited activity 117 1 
+ACN.110_00.000 ULCEV Ever been told you have an ulcer 118 1 
+ACN.120_00.000 ULCYR Had ulcer in past 12 m 119 1 
+ACN.130_00.000 CANEV Ever told by a doctor you had cancer 120 1 
+ACN.140_01.000 CNKIND1 What kind of cancer ... Bladder 121 1 
+ACN.140_02.000 CNKIND2 What kind of cancer ... Blood 122 1 
+ACN.140_03.000 CNKIND3 What kind of cancer ... Bone 123 1 
+ACN.140_04.000 CNKIND4 What kind of cancer ... Brain 124 1 
+ACN.140_05.000 CNKIND5 What kind of cancer ... Breast 125 1 
+ACN.140_06.000 CNKIND6 What kind of cancer ... Cervix 126 1 
+ACN.140_07.000 CNKIND7 What kind of cancer ... Colon 127 1 
+ACN.140_08.000 CNKIND8 What kind of cancer ... Esophagus 128 1 
+ACN.140_09.000 CNKIND9 What kind of cancer ... Gallbladder 129 1 
+ACN.140_10.000 CNKIND10 What kind of cancer ... Kidney 130 1 
+ACN.140_11.000 CNKIND11 What kind of cancer ... larynx-windpipe 131 1 
+ACN.140_12.000 CNKIND12 What kind of cancer ... Leukemia 132 1 
+ACN.140_13.000 CNKIND13 What kind of cancer ... Liver 133 1 
+ACN.140_14.000 CNKIND14 What kind of cancer ... Lung 134 1 
+ACN.140_15.000 CNKIND15 What kind of cancer ... Lymphoma 135 1 
+ACN.140_16.000 CNKIND16 What kind of cancer ... Melanoma 136 1 
+ACN.140_17.000 CNKIND17 What kind of cancer ... mouth/tongue/lip 137 1 
+ACN.140_18.000 CNKIND18 What kind of cancer ... Ovary 138 1 
+ACN.140_19.000 CNKIND19 What kind of cancer ... Pancreas 139 1 
+ACN.140_20.000 CNKIND20 What kind of cancer ... Prostate 140 1 
+ACN.140_21.000 CNKIND21 What kind of cancer ... Rectum 141 1 
+ACN.140_22.000 CNKIND22 What kind of cancer ... skin (non-melanoma) 142 1 
+ACN.140_23.000 CNKIND23 What kind of cancer ... skin (DK kind) 143 1 
+ACN.140_24.000 CNKIND24 What kind of cancer ... soft tissue (muscle or fat) 144 1 
+ACN.140_25.000 CNKIND25 What kind of cancer ... Stomach 145 1 
+ACN.140_26.000 CNKIND26 What kind of cancer ... Testis 146 1 
+ACN.140_27.000 CNKIND27 What kind of cancer ... throat-pharynx 147 1 
+ACN.140_28.000 CNKIND28 What kind of cancer ... Thyroid 148 1 
+ACN.140_29.000 CNKIND29 What kind of cancer ... Uterus 149 1 
+ACN.140_30.000 CNKIND30 What kind of cancer ... Other 150 1 
+ACN.140_31.000 CNKIND31 What kind of cancer ... more than 3 kinds 151 1 
+ACN.150_01.000 CANAGE1 Age first diagnosed w/bladder cancer 152-154 3 
+ACN.150_02.000 CANAGE2 Age first diagnosed w/blood cancer 155-157 3 
+ACN.150_03.000 CANAGE3 Age first diagnosed w/bone cancer 158-160 3 
+ACN.150_04.000 CANAGE4 Age first diagnosed w/brain cancer 161-163 3 
+ACN.150_05.000 CANAGE5 Age first diagnosed w/breast cancer 164-166 3 
+ACN.150_06.000 CANAGE6 Age first diagnosed w/cervical cancer 167-169 3 
+ACN.150_07.000 CANAGE7 Age first diagnosed w/colon cancer 170-172 3 
+ACN.150_08.000 CANAGE8 Age first diagnosed w/esophageal cancer 173-175 3 
+ACN.150_09.000 CANAGE9 Age first diagnosed w/gallbladder cancer 176-178 3 
+ACN.150_10.000 CANAGE10 Age first diagnosed w/kidney cancer 179-181 3 
+ACN.150_11.000 CANAGE11 Age first diagnosed w/larynx-windpipe cancer 182-184 3 
+ACN.150_12.000 CANAGE12 Age first diagnosed w/leukemia 185-187 3 
+ACN.150_13.000 CANAGE13 Age first diagnosed w/liver cancer 188-190 3 
+ACN.150_14.000 CANAGE14 Age first diagnosed w/lung cancer 191-193 3 
+ACN.150_15.000 CANAGE15 Age first diagnosed w/lymphoma 194-196 3 
+ACN.150_16.000 CANAGE16 Age first diagnosed w/melanoma 197-199 3 
+ACN.150_17.000 CANAGE17 Age first diagnosed w/mouth/tongue/lip cancer 200-202 3 
+ACN.150_18.000 CANAGE18 Age first diagnosed w/ovarian cancer 203-205 3 
+ACN.150_19.000 CANAGE19 Age first diagnosed w/pancreatic cancer 206-208 3 
+ACN.150_20.000 CANAGE20 Age first diagnosed w/prostate cancer 209-211 3 
+ACN.150_21.000 CANAGE21 Age first diagnosed w/rectal cancer 212-214 3 
+ACN.150_22.000 CANAGE22 Age first diagnosed w/skin (non-melanoma) cancer 215-217 3 
+ACN.150_23.000 CANAGE23 Age first diagnosed w/skin (DK kind) cancer 218-220 3 
+ACN.150_24.000 CANAGE24 Age first diagnosed w/soft tissue cancer 221-223 3 
+ACN.150_25.000 CANAGE25 Age first diagnosed w/stomach cancer 224-226 3 
+ACN.150_26.000 CANAGE26 Age first diagnosed w/testicular cancer 227-229 3 
+ACN.150_27.000 CANAGE27 Age first diagnosed w/throat/pharynx cancer 230-232 3 
+ACN.150_28.000 CANAGE28 Age first diagnosed w/thyroid cancer 233-235 3 
+ACN.150_29.000 CANAGE29 Age first diagnosed w/uterine cancer 236-238 3 
+ACN.150_30.000 CANAGE30 Age first diagnosed w/other cancer 239-241 3 
+ACN.160_00.000 DIBEV Ever been told that you have diabetes 242 1 
+ACN.165_00.000 DIBPRE1 Ever had prediabetes or other symptoms 243 1 
+ACN.170_00.000 DIBAGE Age first diagnosed w/diabetes 244-245 2 
+ACN.170_00.000 DIFAGE2 Years since first diagnosed w/diabetes 246-247 2 
+ACN.180_00.000 INSLN NOW taking insulin 248 1 
+ACN.190_00.000 DIBPILL NOW taking diabetic pills 249 1 
+ACN.192_00.010 EPILEP1 Ever been told you had seizure order/epilepsy 250 1 
+ACN.192_00.020 EPILEP2 Now taking epilepsy meds 251 1 
+ACN.192_00.030 EPILEP3 # Seizures past 12 m 252 1 
+ACN.192_00.040 EPILEP4 Seen neurologist/specialist past 12 m 253 1 
+ACN.192_00.050 EPILEP5 Epilepsy interfered w/ activities past 30 d 254 1 
+ACN.201_01.000 AHAYFYR Told that you had hay fever, past 12 m 255 1 
+ACN.201_02.000 SINYR Told that you had sinusitis, past 12 m 256 1 
+ACN.201_03.000 CBRCHYR Told you had chronic bronchitis, 12 m 257 1 
+ACN.201_04.000 KIDWKYR Told you had weak/failing kidneys, 12 m 258 1 
+ACN.201_05.000 LIVYR Told you had liver condition, past 12 m 259 1 
+ACN.250_00.000 JNTSYMP Symptoms of joint pain/aching/stiffness past 30 d 260 1 
+ACN.260_01.000 JMTHP1 Which joint affected...shoulder-right 261 1 
+ACN.260_02.000 JMTHP2 Which joint affected...shoulder-left 262 1 
+ACN.260_03.000 JMTHP3 Which joint affected...elbow-right 263 1 
+ACN.260_04.000 JMTHP4 Which joint affected...elbow-left 264 1 
+ACN.260_05.000 JMTHP5 Which joint affected...hip-right 265 1 
+ACN.260_06.000 JMTHP6 Which joint affected...hip-left 266 1 
+ACN.260_07.000 JMTHP7 Which joint affected...wrist-right 267 1 
+ACN.260_08.000 JMTHP8 Which joint affected...wrist-left 268 1 
+ACN.260_09.000 JMTHP9 Which joint affected...knee-right 269 1 
+ACN.260_10.000 JMTHP10 Which joint affected...knee-left 270 1 
+ACN.260_11.000 JMTHP11 Which joint affected...ankle-right 271 1 
+ACN.260_12.000 JMTHP12 Which joint affected...ankle-left 272 1 
+ACN.260_13.000 JMTHP13 Which joint affected...toes-right 273 1 
+ACN.260_14.000 JMTHP14 Which joint affected...toes-left 274 1 
+ACN.260_15.000 JMTHP15 Which joint affected...fingers/thumb-right 275 1 
+ACN.260_16.000 JMTHP16 Which joint affected...fingers/thumb-left 276 1 
+ACN.260_17.000 JMTHP17 Which joint affected...other joint not listed 277 1 
+ACN.270_00.000 JNTCHR Joint symptoms begin more than 3 months ago 278 1 
+ACN.280_00.000 JNTHP Ever seen doctor or health professional for joint symptoms 279 1 
+ACN.290_00.000 ARTH1 Ever been told you had arthritis 280 1 
+ACN.295_00.000 ARTHLMT Limited due to arthritis or joint symptoms 281 1 
+ACN.300_00.000 PAINECK Had neck pain, past 3 months 282 1 
+ACN.310_00.000 PAINLB Had low back pain, past 3 months 283 1 
+ACN.320_00.000 PAINLEG Pain spread down leg/below knees 284 1 
+ACN.331_01.000 PAINFACE Had pain in jaw/front of ear, past 3 months 285 1 
+ACN.331_02.000 AMIGR Had severe headache/migraine, past 3 m 286 1 
+ACN.350_00.000 ACOLD2W Had a head/chest cold past 2 w 287 1 
+ACN.360_00.000 AINTIL2W Had stomach prob w/vomit/diarrhea, 2 w 288 1 
+ACN.370_00.000 PREGNOW Currently pregnant 289 1 
+ACN.370_00.010 PREGFLYR Recently pregnant 290 1 
+ACN.400_00.000 HRAIDNOW Now use a hearing aid 291 1 
+ACN.410_00.000 HRAIDEV Ever used a hearing aid if not now using 292 1 
+ACN.420_00.000 AHEARST1 Hearing w/o hearing aid 293 1 
+ACN.430_00.000 AVISION Trouble seeing even w/glasses/lenses 294 1 
+ACN.440_00.000 ABLIND Blind or unable to see at all 295 1 
+ACN.451_00.000 LUPPRT Lost all upper & lower natural teeth 296 1 
+AIS.010_00.010 AIMSUPEV Ever been told your immune system is weakened 297 1 
+AIS.010_00.020 AIMSPSTL Still have weakened immune system 298 1 
+AIS.010_00.030 AIMSPMED Medications/treatments weakened your immune system, past 6 months 299 1 
+AIS.010_00.040 AIMSPCHC Current health condition weakens your immune system 300 1 
+AIS.010_00.050 AIMSPSHC Ever told your immune system is weakened due to kidney, lung, or liver disease, diabetes, poor nutrition or frailty  301 1 
+AIS.010_00.060 AIMSPCAN Ever told your immune system is weakened due to cancer 302 1 
+AIS.010_00.070 AIMSPCLD Ever told your immune system is weakened because of many infections, colds or can't seem to get over them. 303 1  
+AHS.040_00.000 WKDAYR Number of work loss days, past 12 months 304-306 3 
+AHS.050_00.000 BEDDAYR Number of bed days, past 12 months 307-309 3 
+AHS.060_00.000 AHSTATYR Health better/worse/same, compared w/ 12 months ago 310 1 
+AHS.070_00.000 SPECEQ Have health problem that requires special equipment 311 1 
+AHS.091_01.000 FLWALK How difficult to walk 1/4 mile without special equipment 312 1 
+AHS.091_02.000 FLCLIMB How difficult to climb 10 steps without special equipment 313 1 
+AHS.091_03.000 FLSTAND How difficult to stand 2 hours without special equipment 314 1 
+AHS.091_04.000 FLSIT How difficult to sit 2 hours without special equipment 315 1 
+AHS.091_05.000 FLSTOOP How difficult to stoop, bend or kneel without special equipment 316 1 
+AHS.091_06.000 FLREACH How difficult to reach over head without special equipment 317 1 
+AHS.141_01.000 FLGRASP How difficult to grasp small objects without special equipment 318 1 
+AHS.141_02.000 FLCARRY How difficult to lift/carry 10 lbs without special equipment 319 1 
+AHS.141_03.000 FLPUSH How difficult to push large objects without special equipment 320 1 
+AHS.171_01.000 FLSHOP How difficult to go out to events without special equipment 321 1 
+AHS.171_02.000 FLSOCL How difficult to participate in social activities without special equipment 322 1 
+AHS.171_03.000 FLRELAX How difficult to relax at home without special equipment 323 1 
+AHS.171_00.000 FLA1AR Any functional limitation, all conditions 324 1 
+AHS.200_01.000 AFLHCA1 Vision/problem seeing causes difficulty with activity 325 1 
+AHS.200_02.000 AFLHCA2 Hearing problem causes difficulty with activity 326 1 
+AHS.200_03.000 AFLHCA3 Arthritis/rheumatism causes difficulty with activity 327 1 
+AHS.200_04.000 AFLHCA4 Back or neck problem causes difficulty with activity 328 1 
+AHS.200_05.000 AFLHCA5 Fracture, bone/joint injury causes difficulty with activity 329 1 
+AHS.200_06.000 AFLHCA6 Other injury causes difficulty with activity 330 1 
+AHS.200_07.000 AFLHCA7 Heart problem causes difficulty with activity 331 1 
+AHS.200_08.000 AFLHCA8 Stroke problem causes difficulty with activity 332 1 
+AHS.200_09.000 AFLHCA9 Hypertension/high blood pressure causes difficulty with activity 333 1 
+AHS.200_10.000 AFLHCA10 Diabetes causes difficulty with activity 334 1 
+AHS.200_11.000 AFLHCA11 Lung/breathing problem (e.g., asthma and emphysema) causes difficulty with activity 335 1  
+AHS.200_12.000 AFLHCA12 Cancer causes difficulty with activity 336 1 
+AHS.200_13.000 AFLHCA13 Birth defect causes difficulty with activity 337 1 
+AHS.200_14.000 ALHCA14A Intellectual disability, also known as mental retardation causes difficulty with activity 338 1 
+AHS.200_15.000 AFLHCA15 Other developmental problem (e.g., cerebral palsy) causes difficulty with activity 339 1 
+AHS.200_16.000 AFLHCA16 Senility causes difficulty with activity 340 1 
+AHS.200_17.000 AFLHCA17 Depression/anxiety/emotional problem causes difficulty with activity 341 1 
+AHS.200_18.000 AFLHCA18 Weight problem causes difficulty with activity 342 1 
+AHS.200_00.000 AFLHC19_ Missing or amputated limb/finger/digit causes difficulty with activity 343 1 
+AHS.200_00.000 AFLHC20_ Musculoskeletal/connective tissue problem causes difficulty with activity 344 1
+AHS.200_00.000 AFLHC21_ Circulation problems (including blood clots) cause difficulty with activity 345 1 
+AHS.200_00.000 AFLHC22_ Endocrine/nutritional/metabolic problem causes difficulty with activity 346 1 
+AHS.200_00.000 AFLHC23_ Nervous system/sensory organ condition causes difficulty with activity 347 1 
+AHS.200_00.000 AFLHC24_ Digestive system problem causes difficulty with activity 348 1 
+AHS.200_00.000 AFLHC25_ Genitourinary system problem causes difficulty with activity 349 1 
+AHS.200_00.000 AFLHC26_ Skin/subcutaneous system problem causes difficulty with activity 350 1 
+AHS.200_00.000 AFLHC27_ Blood or blood-forming organ problem causes difficulty with activity 351 1 
+AHS.200_00.000 AFLHC28_ Benign tumor/cyst causes difficulty with activity 352 1 
+AHS.200_00.000 AFLHC29_ Alcohol/drug/substance abuse problem causes difficulty with activity 353 1 
+AHS.200_00.000 AFLHC30_ Other mental problem/ADD/Bipolar/Schizophrenia causes difficulty with activity 354 1 
+AHS.200_00.000 AFLHC31_ Surgical after-effects/medical treatment causes difficulty with activity 355 1 
+AHS.200_00.000 AFLHC32_ "Old age"/elderly/aging-related problem causes difficulty with activity 356 1 
+AHS.200_00.000 AFLHC33_ Fatigue/tiredness/weakness causes difficulty with activity 357 1 
+AHS.200_00.000 AFLHC34_ Pregnancy-related problem causes difficulty with activity 358 1 
+AHS.200_90.000 AFLHCA90 Other impairment/problem (1) causes difficulty with activity 359 1 
+AHS.200_91.000 AFLHCA91 Other impairment/problem (2) causes difficulty with activity 360 1 
+AHS.300_01.000 ALTIME1 Duration of vision problem: Number of units 361-362 2 
+AHS.300_02.000 ALUNIT1 Duration of vision problem: Time unit 363 1 
+AHS.300_02.000 ALDURA1 Duration (in years) of vision problem,  1 364-365 2 
+AHS.300_02.000 ALDURB1 Duration of vision problem,  2 366 1 
+AHS.300_02.000 ALCHRC1 Vision problem condition status  367 1 
+AHS.301_01.000 ALTIME2 Duration of hearing problem: Number of units 368-369 2 
+AHS.301_02.000 ALUNIT2 Duration of hearing problem: Time unit 370 1 
+AHS.301_02.000 ALDURA2 Duration (in years) of hearing problem,  1 371-372 2 
+AHS.301_02.000 ALDURB2 Duration of hearing problem,  2 373 1 
+AHS.301_02.000 ALCHRC2 Hearing problem condition status  374 1 
+AHS.302_01.000 ALTIME3 Duration of arthritis/rheumatism: Number of units 375-376 2 
+AHS.302_02.000 ALUNIT3 Duration of arthritis/rheumatism: Time unit 377 1 
+AHS.302_02.000 ALDURA3 Duration (in years) of arthritis/rheumatism,  1 378-379 2 
+AHS.302_02.000 ALDURB3 Duration of arthritis/rheumatism,  2 380 1 
+AHS.302_02.000 ALCHRC3 Arthritis/rheumatism condition status  381 1 
+AHS.303_01.000 ALTIME4 Duration of back or neck problem: Number of units 382-383 2 
+AHS.303_02.000 ALUNIT4 Duration of back or neck problem: Time unit 384 1 
+AHS.303_02.000 ALDURA4 Duration (in years) of back or neck problem,  1 385-386 2 
+AHS.303_02.000 ALDURB4 Duration of back or neck problem,  2 387 1 
+AHS.303_02.000 ALCHRC4 Back or neck problem condition status  388 1 
+AHS.304_01.000 ALTIME5 Duration of fracture, bone/joint injury: Number of units 389-390 2 
+AHS.304_02.000 ALUNIT5 Duration of fracture, bone/joint injury: Time unit 391 1 
+AHS.304_02.000 ALDURA5 Duration (in years) of fracture, bone/joint injury,  1 392-393 2 
+AHS.304_02.000 ALDURB5 Duration of fracture, bone/joint injury,  2 394 1 
+AHS.304_02.000 ALCHRC5 Fracture, bone/joint injury condition status  395 1 
+AHS.305_01.000 ALTIME6 Duration of other injury: Number of units 396-397 2 
+AHS.305_02.000 ALUNIT6 Duration of other injury: Time unit 398 1 
+AHS.305_02.000 ALDURA6 Duration (in years) of other injury,  1 399-400 2 
+AHS.305_02.000 ALDURB6 Duration of other injury,  2 401 1 
+AHS.305_02.000 ALCHRC6 Other injury condition status  402 1 
+AHS.306_01.000 ALTIME7 Duration of heart problem: Number of units 403-404 2 
+AHS.306_02.000 ALUNIT7 Duration of heart problem: Time unit 405 1 
+AHS.306_02.000 ALDURA7 Duration (in years) of heart problem,  1 406-407 2 
+AHS.306_02.000 ALDURB7 Duration of heart problem,  2 408 1 
+AHS.306_02.000 ALCHRC7 Heart problem condition status  409 1 
+AHS.307_01.000 ALTIME8 Duration of stroke problem: Number of units 410-411 2 
+AHS.307_02.000 ALUNIT8 Duration of stroke problem: Time unit 412 1 
+AHS.307_02.000 ALDURA8 Duration (in years) of stroke problem,  1 413-414 2 
+AHS.307_02.000 ALDURB8 Duration of stroke problem,  2 415 1 
+AHS.307_02.000 ALCHRC8 Stroke problem condition status  416 1 
+AHS.308_01.000 ALTIME9 Duration of hypertension or high blood pressure: Number of units 417-418 2 
+AHS.308_02.000 ALUNIT9 Duration of hypertension or high blood pressure: Time unit 419 1 
+AHS.308_02.000 ALDURA9 Duration (in years) of hypertension or high blood pressure:  1 420-421 2 
+AHS.308_02.000 ALDURB9 Duration of hypertension or high blood pressure:  2 422 1 
+AHS.308_02.000 ALCHRC9 Hypertension or high blood pressure condition status  423 1 
+AHS.309_01.000 ALTIME10 Duration of diabetes: Number of units 424-425 2 
+AHS.309_02.000 ALUNIT10 Duration of diabetes: Time unit 426 1 
+AHS.309_02.000 ALDURA10 Duration (in years) of diabetes,  1 427-428 2 
+AHS.309_02.000 ALDURB10 Duration of diabetes,  2 429 1 
+AHS.309_02.000 ALCHRC10 Diabetes condition status  430 1 
+AHS.310_01.000 ALTIME11 Duration of lung/breathing problem (e.g., asthma and emphysema): Number of units 431-432 2 
+AHS.310_02.000 ALUNIT11 Duration of lung/breathing problem: (e.g., asthma and emphysema) Time unit 433 1 
+AHS.310_02.000 ALDURA11 Duration (in years) of lung/breathing problem (e.g., asthma and emphysema),  1 434-435 2  
+AHS.310_02.000 ALDURB11 Duration of lung/breathing problem (e.g., asthma and emphysema),  2 436 1
+AHS.310_02.000 ALCHRC11 Lung/breathing problem (e.g., asthma and emphysema) condition status  437 1 
+AHS.311_01.000 ALTIME12 Duration of cancer: Number of units 438-439 2 
+AHS.311_02.000 ALUNIT12 Duration of cancer: Time unit 440 1 
+AHS.311_02.000 ALDURA12 Duration (in years) of cancer,  1 441-442 2 
+AHS.311_02.000 ALDURB12 Duration of cancer,  2 443 1 
+AHS.311_02.000 ALCHRC12 Cancer condition status  444 1 
+AHS.312_01.000 ALTIME13 Duration of birth defect: Number of units 445-446 2 
+AHS.312_02.000 ALUNIT13 Duration of birth defect: Time unit 447 1 
+AHS.312_02.000 ALDURA13 Duration (in years) of birth defect,  1 448-449 2 
+AHS.312_02.000 ALDURB13 Duration of birth defect,  2 450 1 
+AHS.312_02.000 ALCHRC13 Birth defect condition status  451 1 
+AHS.313_01.000 ATIME14A Duration of intellectual disability, also known as mental retardation: Number of units 452-453 2
+AHS.313_02.000 AUNIT14A Duration of intellectual disability, also know as mental retardation: Time unit 454 1 
+AHS.313_02.000 ADURA14A Duration (in years) of intellectual disability, also known as mental retardation, 455-456 2 
+AHS.313_02.000 ADURB14A Duration of intellectual disability, also known as mental retardation,  2 457 1 
+AHS.313_02.000 ACHRC14A Intellectual disability, also known as mental retardation condition status  458 1 
+AHS.314_01.000 ALTIME15 Duration of other developmental problem (e.g., cerebral palsy): Number of units 459-460 2 
+AHS.314_02.000 ALUNIT15 Duration of other developmental problem (e.g., cerebral palsy): Time unit 461 1 
+AHS.314_02.000 ALDURA15 Duration (in years) of other developmental problem (e.g., cerebral palsy), 462-463 2 
+AHS.314_02.000 ALDURB15 Duration of other developmental problem (e.g., cerebral palsy),  2 464 1 
+AHS.314_02.000 ALCHRC15 Other developmental problem (e.g., cerebral palsy) condition status  465 1 
+AHS.315_01.000 ALTIME16 Duration of senility: Number of units 466-467 2 
+AHS.315_02.000 ALUNIT16 Duration of senility: Time unit 468 1 
+AHS.315_02.000 ALDURA16 Duration (in years) of senility,  1 469-470 2 
+AHS.315_02.000 ALDURB16 Duration of senility,  2 471 1 
+AHS.315_02.000 ALCHRC16 Senility condition status  472 1 
+AHS.316_01.000 ALTIME17 Duration of depression/anxiety/emotional problem: Number of units 473-474 2 
+AHS.316_02.000 ALUNIT17 Duration of depression/anxiety/emotional problem: Time unit 475 1 
+AHS.316_02.000 ALDURA17 Duration (in years) of depression/anxiety/emotional problem,  1 476-477 2 
+AHS.316_02.000 ALDURB17 Duration of depression/anxiety/emotional problem,  2 478 1 
+AHS.316_02.000 ALCHRC17 Depression/anxiety/emotional problem condition status  479 1 
+AHS.317_01.000 ALTIME18 Duration of weight problem: Number of units 480-481 2 
+AHS.317_02.000 ALUNIT18 Duration of weight problem: Time unit 482 1 
+AHS.317_02.000 ALDURA18 Duration (in years) of weight problem,  1 483-484 2 
+AHS.317_02.000 ALDURB18 Duration of weight problem,  2 485 1 
+AHS.317_02.000 ALCHRC18 Weight problem condition status  486 1 
+AHS.318_01.000 ALTIME19 Duration of missing limbs (fingers, toes, or digits); amputation: Number of units 487-488 2 
+AHS.318_02.000 ALUNIT19 Duration of missing limbs (fingers, toes, or digits); amputation: Time unit 489 1 
+AHS.318_02.000 ALDURA19 Duration (in years) of missing limbs (fingers, toes, or digits); amputation,  1 490-491 2 
+AHS.318_02.000 ALDURB19 Duration of missing limbs (fingers, toes, or digits); amputation,  2 492 1 
+AHS.318_02.000 ALCHRC19 Missing limbs (fingers, toes, or digits); amputation condition status  493 1 
+AHS.319_01.000 ALTIME20 Duration of musculoskeletal/connective tissue problem: Number of units 494-495 2 
+AHS.319_02.000 ALUNIT20 Duration of musculoskeletal/connective tissue problem: Time unit 496 1 
+AHS.319_02.000 ALDURA20 Duration (in years) of musculoskeletal/connective tissue problem,  1 497-498 2 
+AHS.319_02.000 ALDURB20 Duration of musculoskeletal/connective tissue problem,  2 499 1 
+AHS.319_02.000 ALCHRC20 Musculoskeletal/connective tissue problem condition status  500 1 
+AHS.320_01.000 ALTIME21 Duration of circulation problems (including blood clots): Number of units 501-502 2 
+AHS.320_02.000 ALUNIT21 Duration of circulation problems (including blood clots): Time unit 503 1 
+AHS.320_02.000 ALDURA21 Duration (in years) of circulation problems (including blood clots),  1 504-505 2 
+AHS.320_02.000 ALDURB21 Duration of circulation problems (including blood clots),  2 506 1 
+AHS.320_02.000 ALCHRC21 Circulation problems (including blood clots) condition status  507 1 
+AHS.321_01.000 ALTIME22 Duration of endocrine/nutritional/metabolic problem: Number of units 508-509 2 
+AHS.321_02.000 ALUNIT22 Duration of endocrine/nutritional/metabolic problem: Time unit 510 1 
+AHS.321_02.000 ALDURA22 Duration (in years) of endocrine/nutritional/metabolic problem,  1 511-512 2 
+AHS.321_02.000 ALDURB22 Duration of endocrine/nutritional/metabolic problem,  2 513 1 
+AHS.321_02.000 ALCHRC22 Endocrine/nutritional/metabolic problem condition status  514 1 
+AHS.322_01.000 ALTIME23 Duration of nervous system/sensory organ condition: Number of units 515-516 2 
+AHS.322_02.000 ALUNIT23 Duration of nervous system/sensory organ condition: Time unit 517 1 
+AHS.322_02.000 ALDURA23 Duration (in years) of nervous system/sensory organ condition,  1 518-519 2 
+AHS.322_02.000 ALDURB23 Duration of nervous system/sensory organ condition,  2 520 1 
+AHS.322_02.000 ALCHRC23 Nervous system/sensory organ condition status  521 1 
+AHS.323_01.000 ALTIME24 Duration of digestive system problems: Number of units 522-523 2 
+AHS.323_02.000 ALUNIT24 Duration of digestive system problems: Time unit 524 1 
+AHS.323_02.000 ALDURA24 Duration (in years) of digestive system problems,  1 525-526 2 
+AHS.323_02.000 ALDURB24 Duration of digestive system problems,  2 527 1 
+AHS.323_02.000 ALCHRC24 Digestive system problems condition status  528 1 
+AHS.324_01.000 ALTIME25 Duration of genitourinary system problem: Number of units 529-530 2 
+AHS.324_02.000 ALUNIT25 Duration of genitourinary system problem: Time unit 531 1 
+AHS.324_02.000 ALDURA25 Duration (in years) of genitourinary system problem,  1 532-533 2 
+AHS.324_02.000 ALDURB25 Duration of genitourinary system problem,  2 534 1 
+AHS.324_02.000 ALCHRC25 Genitourinary system problem condition status  535 1 
+AHS.325_01.000 ALTIME26 Duration of skin/subcutaneous system problems: Number of units 536-537 2 
+AHS.325_02.000 ALUNIT26 Duration of skin/subcutaneous system problems: Time unit 538 1 
+AHS.325_02.000 ALDURA26 Duration (in years) of skin/subcutaneous system problems,  1 539-540 2 
+AHS.325_02.000 ALDURB26 Duration of skin/subcutaneous system problems,  2 541 1 
+AHS.325_02.000 ALCHRC26 Skin/subcutaneous system problems condition status  542 1 
+AHS.326_01.000 ALTIME27 Duration of blood or blood-forming organ problem: Number of units 543-544 2 
+AHS.326_02.000 ALUNIT27 Duration of blood or blood-forming organ problem: Time unit 545 1 
+AHS.326_02.000 ALDURA27 Duration (in years) of blood or blood-forming organ problem,  1 546-547 2 
+AHS.326_02.000 ALDURB27 Duration of blood or blood-forming organ problem,  2 548 1 
+AHS.326_02.000 ALCHRC27 Blood or blood-forming organ problem condition status  549 1 
+AHS.327_01.000 ALTIME28 Duration of benign tumor/cyst: Number of units 550-551 2 
+AHS.327_02.000 ALUNIT28 Duration of benign tumor/cyst: Time unit 552 1 
+AHS.327_02.000 ALDURA28 Duration (in years) of benign tumor/cyst,  1 553-554 2 
+AHS.327_02.000 ALDURB28 Duration of benign tumor/cyst,  2 555 1 
+AHS.327_02.000 ALCHRC28 Benign tumor/cyst condition status  556 1 
+AHS.328_01.000 ALTIME29 Duration of alcohol /drug/substance abuse problem: Number of units 557-558 2 
+AHS.328_02.000 ALUNIT29 Duration of alcohol/drug/substance abuse problem: Time unit 559 1 
+AHS.328_02.000 ALDURA29 Duration (in years) of alcohol/drug/substance abuse problem,  1 560-561 2 
+AHS.328_02.000 ALDURB29 Duration of alcohol/drug/substance abuse problem,  2 562 1 
+AHS.328_02.000 ALCHRC29 Alcohol /drug/substance abuse problem condition status  563 1 
+AHS.329_01.000 ALTIME30 Duration of other mental problem/ADD/Bipolar/Schizophrenia: Number of units 564-565 2 
+AHS.329_02.000 ALUNIT30 Duration of other mental problem/ADD/Bipolar/Schizophrenia: Time unit 566 1 
+AHS.329_02.000 ALDURA30 Duration (in years) of other mental problem/ADD/Bipolar/Schizophrenia, 567-568 2 
+AHS.329_02.000 ALDURB30 Duration of other mental problem/ADD/Bipolar/Schizophrenia,  2 569 1 
+AHS.329_02.000 ALCHRC30 Other mental problem/ADD/Bipolar/Schizophrenia condition status  570 1 
+AHS.330_01.000 ALTIME31 Duration of surgical after-effects/medical treatment problems: Number of units 571-572 2 
+AHS.330_02.000 ALUNIT31 Duration of surgical after-effects/medical treatment problems: Time unit 573 1 
+AHS.330_02.000 ALDURA31 Duration (in years) of surgical after-effects/medical treatment problems,  574-575 2  
+AHS.330_02.000 ALDURB31 Duration of surgical after-effects/medical treatment problems,  2 576 1 
+AHS.330_02.000 ALCHRC31 Surgical after-effects/medical treatment problems condition status  577 1 
+AHS.331_01.000 ALTIME32 Duration of "old age"/elderly/aging-related problems: Number of units 578-579 2 
+AHS.331_02.000 ALUNIT32 Duration of "old age"/elderly/aging-related problems: Time unit 580 1 
+AHS.331_02.000 ALDURA32 Duration (in years) of "old age"/elderly/aging-related problems,  1 581-582 2 
+AHS.331_02.000 ALDURB32 Duration of "old age"/elderly/aging-related problems,  2 583 1 
+AHS.331_02.000 ALCHRC32 "Old age"/elderly/aging-related problems condition status  584 1 
+AHS.332_01.000 ALTIME33 Duration of fatigue/tiredness/weakness problem: Number of units 585-586 2 
+AHS.332_02.000 ALUNIT33 Duration of fatigue/tiredness/weakness problem: Time unit 587 1 
+AHS.332_02.000 ALDURA33 Duration (in years) of fatigue/tiredness/weakness problem,  1 588-589 2 
+AHS.332_02.000 ALDURB33 Duration of fatigue/tiredness/weakness problem,  2 590 1 
+AHS.332_02.000 ALCHRC33 Fatigue/tiredness/weakness problem condition status  591 1 
+AHS.333_01.000 ALTIME34 Duration of pregnancy-related problem: Number of units 592-593 2 
+AHS.333_02.000 ALUNIT34 Duration of pregnancy-related problem: Time unit 594 1 
+AHS.333_02.000 ALDURA34 Duration (in years) of pregnancy-related problem,  1 595-596 2 
+AHS.333_02.000 ALDURB34 Duration of pregnancy-related problem,  2 597 1 
+AHS.333_02.000 ALCHRC34 Pregnancy-related condition status  598 1 
+AHS.335_01.000 ALTIME90 Duration of other impairment/problem N.E.C. (1): Number of units 599-600 2 
+AHS.335_02.000 AALUNIT90 Duration of other impairment/problem N.E.C. (1): Time unit 601 1 
+AHS.335_02.000 ALDURA90 Duration (in years) of other impairment/problem N.E.C. (1),  1 602-603 2 
+AHS.335_02.000 ALDURB90 Duration of other impairment/problem N.E.C. (1),  2 604 1 
+AHS.335_02.000 ALCHRC90 Other impairment/problem N.E.C. (1) condition status  605 1 
+AHS.336_01.000 ALTIME91 Duration of other impairment/problem N.E.C. (2): Number of units 606-607 2 
+AHS.336_02.000 ALUNIT91 Duration of other impairment/problem N.E.C. (2): Time unit 608 1 
+AHS.336_02.000 ALDURA91 Duration (in years) of other impairment/ problem N.E.C. (2),  1 609-610 2 
+AHS.336_02.000 ALDURB91 Duration of other impairment/problem N.E.C. (2),  2 611 1 
+AHS.336_02.000 ALCHRC91 Other impairment/problem N.E.C. (2) condition status  612 1 
+AHS.336_02.000 ALCNDRT Chronic condition  for individual with functional limitation 613 1 
+AHS.336_02.000 ALCHRONR Overall functional limitation  by condition status 614 1 
+AHB.010_00.000 SMKEV Ever smoked 100 cigarettes 615 1 
+AHB.020_00.000 SMKREG Age first smoked fairly regularly 616-617 2 
+AHB.030_00.000 SMKNOW Smoke freq: everyday/some days/not at all 618 1 
+AHB.030_00.000 SMKSTAT2 Smoking Status:  619 1 
+AHB.040_01.000 SMKQTNO Time since quit: # of units 620-621 2 
+AHB.040_02.000 SMKQTTP Time since quit: time period 622 1 
+AHB.040_02.000 SMKQTY Time since quit smoking (in years) 623-624 2 
+AHB.050_00.000 CIGSDA1 Number cigs per day (daily smokers) 625-626 2 
+AHB.060_00.000 CIGDAMO Number days smoked in past 30 days 627-628 2 
+AHB.070_00.000 CIGSDA2 Number cigs per day (some day smokers) 629-630 2 
+AHB.070_00.000 CIGSDAY Number of cigarettes a day (all current smokers) 631-632 2 
+AHB.080_00.000 CIGQTYR Tried quit smoking 1+ days, past 12 m 633 1 
+AHB.085_00.010 OTHCIGEV Ever smoked tobacco products, OTHER than cigarettes 634 1 
+AHB.085_00.020 OTHCIGED Smoke freq: everyday/some days/rarely/not at all (other than cigarettes) 635 1 
+AHB.085_00.030 SMKLESEV Ever used smokeless tobacco products 636 1 
+AHB.085_00.040 SMKLESED Smokeless tobacco freq: everyday/some days/rarely/not at all 637 1 
+AHB.085_00.050 TOBLASYR Using any tobacco product, around this time last year 638 1 
+AHB.085_00.060 TOBQTYR Tried quit all tobacco products 1+ days, past 12 m 639 1 
+AHB.090_01.000 VIGNO Freq vigorous activity: # of units 640-642 3 
+AHB.090_02.000 VIGTP Freq vigorous activity: Time units 643 1 
+AHB.090_02.000 VIGFREQW Freq vigorous activity (times per wk) 644-645 2 
+AHB.100_01.000 VIGLNGNO Duration vigorous activity: # units 646-648 3 
+AHB.100_02.000 VIGLNGTP Duration vigorous activity: Time unit 649 1 
+AHB.100_02.000 VIGMIN Duration vigorous activity (in minutes) 650-652 3 
+AHB.110_01.000 MODNO Freq moderate activity: # of units 653-655 3 
+AHB.110_02.000 MODTP Freq moderate activity: Time units 656 1 
+AHB.110_02.000 MODFREQW Freq light/moderate activity (times per wk) 657-658 2 
+AHB.120_01.000 MODLNGNO Duration moderate activity: # of units 659-661 3 
+AHB.120_02.000 MODLNGTP Duration moderate activity: Time unit 662 1 
+AHB.120_02.000 MODMIN Duration light/moderate activity (in minutes) 663-665 3 
+AHB.130_01.000 STRNGNO Strength activity freq: # of units 666-668 3 
+AHB.130_02.000 STRNGTP Strength activity freq: Time units 669 1 
+AHB.130_02.000 STRFREQW Freq strength activity (times per wk) 670-671 2 
+AHB.140_00.000 ALC1YR Ever had 12+ drinks in any one year 672 1 
+AHB.150_00.000 ALCLIFE Had 12+ drinks in ENTIRE LIFE 673 1 
+AHB.160_01.000 ALC12MNO Freq drank alcohol pst yr: # of units 674-676 3 
+AHB.160_02.000 ALC12MTP Freq drank alcohol pst yr: Time unit 677 1 
+AHB.160_02.000 ALC12MWK Freq drank alcohol: Days per week 678-679 2 
+AHB.160_02.000 ALC12MYR Freq drank alcohol: Days in past year 680-682 3 
+AHB.170_00.000 ALCAMT Average # drinks on days drank 683-684 2 
+AHB.170_00.000 ALCSTAT Alcohol drinking status:  685-686 2 
+AHB.180_01.000 ALC5UPNO Days 5+ drinks, past yr: # days 687-689 3 
+AHB.180_02.000 ALC5UPTP Days 5+ drinks, past yr: Time unit 690 1 
+AHB.180_02.000 ALC5UPYR Number of days had 5+ drinks past year 691-693 3 
+AHB.190_04.000 AHEIGHT Total height in inches 694-695 2 
+AHB.200_02.000 AWEIGHTP Weight without shoes (pounds) 696-698 3 
+AHB.200_02.000 BMI Body Mass Index (BMI) 699-702 4 
+AAU.020_00.000 AUSUALPL Place USUALLY go when sick 703 1 
+AAU.030_00.000 APLKIND Place to go when sick (most often) 704 1 
+AAU.035_00.000 AHCPLROU USUALLY go there for routine/preventive care 705 1 
+AAU.037_00.000 AHCPLKND Place USUALLY go for routine/preventive care 706 1 
+AAU.040_00.000 AHCCHGYR Change health care place, past 12 m 707 1 
+AAU.050_00.000 AHCCHGHI Change related to health insurance 708 1 
+AAU.050_01.010 ANOUSPL1 Doesn't need doctor/haven't had problems 709 1 
+AAU.050_02.010 ANOUSPL2 Doesn't like/trust/believe in doctors 710 1 
+AAU.050_03.010 ANOUSPL3 Doesn't know where to go 711 1 
+AAU.050_04.010 ANOUSPL4 Previous doctor is not available/moved 712 1 
+AAU.050_05.010 ANOUSPL5 Too expensive/no insurance/cost 713 1 
+AAU.050_06.010 ANOUSPL6 Speak a different language 714 1 
+AAU.050_07.010 ANOUSPL7 No care available/too far away/not convenient 715 1 
+AAU.050_08.010 ANOUSPL8 Put if off/didn't get around to it 716 1 
+AAU.050_09.010 ANOUSPL9 Other reason no usual place of care 717 1 
+AAU.051_00.010 APRVTRYR Trouble finding a doctor/provider, past 12 m 718 1 
+AAU.053_00.010 APRVTRFD Able to find doctor/provider, past 12 m 719 1 
+AAU.057_00.010 ADRNANP Doctor's office not accept you as new patient, past 12 m 720 1 
+AAU.059_00.010 ADRNAI Doctor's office not accept your health insurance, past 12 m 721 1 
+AAU.061_01.000 AHCDLYR1 Couldn't get through on phone, past 12 m 722 1 
+AAU.061_02.000 AHCDLYR2 Couldn't get appointment soon enough, past 12 m 723 1 
+AAU.061_03.000 AHCDLYR3 Wait too long in doctor's office, past 12 m 724 1 
+AAU.061_04.000 AHCDLYR4 Not open when you could go, past 12 m 725 1 
+AAU.061_05.000 AHCDLYR5 No transportation, past 12 m 726 1 
+AAU.111_01.000 AHCAFYR1 Couldn't afford prescription medicine, past 12 m 727 1 
+AAU.111_02.000 AHCAFYR2 Couldn't afford mental health care/counseling, past 12 m 728 1 
+AAU.111_03.000 AHCAFYR3 Couldn't afford dental care, past 12 m 729 1 
+AAU.111_04.000 AHCAFYR4 Couldn't afford eyeglasses, past 12 m 730 1 
+AAU.111_05.010 AHCAFYR5 Couldn't afford to see a specialist, past 12 m 731 1 
+AAU.111_06.010 AHCAFYR6 Couldn't afford follow-up care, past 12 m 732 1 
+AAU.113_00.010 AWORPAY Get sick or have accident, worried about paying medical bills 733 1 
+AAU.113_00.020 AHICOMP Health insurance coverage compared to a year ago 734 1 
+AAU.126_01.010 ARX12MO Prescribed medication by doctor/health professional, past 12 m 735 1 
+AAU.127_01.010 ARX12_1 Skipped medication doses to save money, past 12 m 736 1 
+AAU.127_02.010 ARX12_2 Took less medicine to save money, past 12 m 737 1 
+AAU.127_03.010 ARX12_3 Delayed filling a prescription to save money, past 12 m 738 1 
+AAU.127_04.010 ARX12_4 Asked doctor for lower cost medication to save money, past 12 m 739 1 
+AAU.127_05.010 ARX12_5 Bought prescription drugs from another country to save money, past 12 m 740 1 
+AAU.127_06.010 ARX12_6 Used alternative therapies to save money, past 12 m 741 1 
+AAU.135_00.000 ADNLONG2 Time since last saw a dentist 742 1 
+AAU.141_01.000 AHCSYR1 Seen/talked to mental health professional, past 12 m 743 1 
+AAU.141_02.000 AHCSYR2 Seen/talked to eye doctor, past 12 m 744 1 
+AAU.141_03.000 AHCSYR3 Seen/talked to foot doctor, past 12 m 745 1 
+AAU.141_04.000 AHCSYR4 Seen/talked to a chiropractor, past 12 m 746 1 
+AAU.141_05.000 AHCSYR5 Seen/talked to therapist (PT/OT/etc.), past 12 m 747 1 
+AAU.141_06.000 AHCSYR6 Seen/talked to a NP/PA/midwife, past 12 m 748 1 
+AAU.200_00.000 AHCSYR7 Seen/talked to OB/GYN, past 12 m 749 1 
+AAU.211_01.000 AHCSYR8 Seen/talked to a medical specialist, past 12 m 750 1 
+AAU.211_02.000 AHCSYR9 Seen/talked to a general doctor, past 12 m 751 1 
+AAU.230_00.000 AHCSYR10 Doctor treats both kids and adults 752 1 
+AAU.240_00.000 AHERNOY2 # times in ER/ED, past 12 m 753-754 2 
+AAU.243_00.010 AERVISND ER visit at night or on weekend 755 1 
+AAU.245_00.010 AERHOS ER visit resulted in hospital admission 756 1 
+AAU.248_01.010 AERREA1R ER visit because didn't have another place to go 757 1 
+AAU.248_02.020 AERREA2R ER visit because doctors office or clinic was not open 758 1 
+AAU.248_03.030 AERREA3R ER visit because advised by health provider to go 759 1 
+AAU.248_04.040 AERREA4R ER visit because problem too serious for doctor's office/clinic 760 1 
+AAU.248_05.050 AERREA5R ER visit because only hospital could help 761 1 
+AAU.248_06.060 AERREA6R ER visit because it is closest provider 762 1 
+AAU.248_07.070 AERREA7R ER visit because it is usual place to get care 763 1 
+AAU.248_08.080 AERREA8R Arrived at ER by ambulance/other emergency vehicle 764 1 
+AAU.250_00.000 AHCHYR Received home care from health professional, past 12 m 765 1 
+AAU.260_00.000 AHCHMOYR # months of home care, past 12 m 766-767 2 
+AAU.270_00.000 AHCHNOY2 Total number of home visits 768-769 2 
+AAU.280_00.000 AHCNOYR2 Total number of office visits, past 12 m 770-771 2 
+AAU.290_00.000 ASRGYR Surgery/surgical procedure, past 12 m 772 1 
+AAU.300_00.000 ASRGNOYR # of surgeries, past 12 m 773-774 2 
+AAU.305_00.000 AMDLONGR Time since last seen/talked to health professional 775 1 
+AAU.306_00.010 AVISLAST Place of last medical visit 776 1 
+AAU.306_00.021 ALASTYP1 General doctor seen on last visit 777 1 
+AAU.306_00.022 ALASTYP2 Specialist seen on last visit 778 1 
+AAU.306_00.023 ALASTYP3 Nurse practitioner/physician assistant seen on last visit 779 1 
+AAU.306_00.024 ALASTYP4 Other health provider seen on last visit 780 1 
+AAU.306_00.025 ALASTVRB Other Health professional seen (categorized verbatim) 781-796 16 
+AAU.307_01.010 AVISAPN2 Appointment wait time-number 797-798 2 
+AAU.307_02.020 AVISAPT2 Appointment wait time-time period 799 1 
+AAU.308_01.010 AWAITRMN Time in waiting room-number 800-801 2 
+AAU.308_02.020 AWAITRMT Time in waiting room-time period 802 1 
+AAU.309_00.010 HIT1A Looked up health information on Internet, past 12 m 803 1 
+AAU.309_00.020 HIT2A Filled a prescription on Internet, past 12 m 804 1 
+AAU.309_00.030 HIT3A Scheduled medical appointment on Internet, past 12 m 805 1 
+AAU.309_00.040 HIT4A Communicated with health care provider by email, past 12 m 806 1 
+AAU.309_00.050 HIT5A Used chat groups to learn about health topics, past 12 m 807 1 
+AAU.310_00.000 SHTFLU2 Flu shot past 12 m 808 1 
+AAU.312_01.000 ASHFLUM2 Month of most recent flu shot 809-810 2 
+AAU.312_02.000 ASHFLUY2 Year of most recent flu shot 811-814 4 
+AAU.313_00.000 FLUSHPG1 Flu shot before/during your current pregnancy, interviewed Jan-Mar or Aug-Dec, 2013 815 1 
+AAU.314_00.000 FLUSHPG2 Flu shot before/during/after a pregnancy 816 1 
+AAU.315_00.000 SPRFLU2 Flu nasal spray past 12 m 817 1 
+AAU.318_01.000 ASPFLUM2 Month of most recent flu nasal spray 818-819 2 
+AAU.318_02.000 ASPFLUY2 Year of most recent flu nasal spray 820-823 4 
+AAU.320_00.000 SHTPNUYR Pneumonia shot (EVER) 824 1 
+AAU.330_00.000 APOX Ever had chickenpox 825 1 
+AAU.340_00.000 APOX12MO Chickenpox, past 12 m 826 1 
+AAU.350_00.000 AHEP Ever had hepatitis 827 1 
+AAU.360_00.000 AHEPLIV Ever lived w/ someone w/ hepatitis 828 1 
+AAU.365_00.010 AHEPBTST Ever had a blood test for hepatitis B 829 1 
+AAU.370_00.000 SHTHEPB Hepatitis B vaccine (EVER) 830 1 
+AAU.380_00.000 SHEPDOS # doses of hepatitis B vaccine received 831 1 
+AAU.390_00.010 SHTHEPA Hepatitis A vaccine (EVER) 832 1 
+AAU.400_00.010 SHEPANUM # shots of hepatitis A vaccine received 833-834 2 
+AAU.405_00.010 AHEPCTST Ever had a blood test for hepatitis C 835 1 
+AAU.405_00.020 AHEPCRES Main reason tested for Hepatitis C 836 1 
+AAU.410_00.010 SHINGLES Ever had the Zoster or Shingles vaccine 837 1 
+AAU.420_00.010 SHTTD Tetanus shot in the past 10 years 838 1 
+AAU.430_00.010 SHTTD05 Tetanus shot given in 2005 or later 839 1 
+AAU.440_00.010 SHTTDAP2 Vaccine included pertussis/whooping cough 840 1 
+AAU.446_00.010 SHTHPV2 Ever received HPV shot/vaccine 841 1
+AAU.448_00.010 SHHPVDOS Number of HPV shots received 842-843 2 
+AAU.449_00.010 AHPVAGE Age at first HPV shot 844-846 3 
+AAU.450_00.010 LIVEV Ever told you had any kind of chronic/long-term liver condition 847 1 
+AAU.460_00.010 TRAVEL Ever traveled outside USA since 1995 (Excluding Europe, Japan, Australia, New Zealand, and Canada) 848 1 
+AAU.465_00.010 WRKHLTH2 Work or volunteer in a health care setting 849 1 
+AAU.470_00.010 WRKDIR Direct contact with patients 850 1 
+AAU.500_00.010 APSBPCHK Blood pressure checked by doctor/nurse/health professional, past 12 m 851 1 
+AAU.510_00.010 APSCHCHK Cholesterol checked by doctor/nurse/health professional, past 12 m 852 1 
+AAU.520_00.010 APSBSCHK Fasting test for high blood sugar/diabetes, past 12 m 853 1 
+AAU.530_00.010 APSPAP Pap smear/test, past 12 m 854 1 
+AAU.540_00.010 APSMAM Mammogram, past 12 m 855 1 
+AAU.550_00.010 APSCOL Test for colon cancer, past 12 m 856 1 
+AAU.560_00.010 APSDIET Doctor/health professional talked to you about diet, past 12 m 857 1 
+AAU.570_00.010 APSSMKC Doctor/health professional talked to you about smoking, past 12 m 858 1 
+AAU.580_00.010 LTCFAM Have family member who needed ADL help for 1+ yrs 859 1 
+AAU.582_00.010 LTCHELP How likely you will need ADL help 860 1 
+AAU.584_01.010 LTCWHO1 Family would provide ADL help 861 1 
+AAU.584_02.010 LTCWHO2 Hire someone to provide ADL help 862 1 
+AAU.584_03.010 LTCWHO3 Home health care organization would provide ADL help 863 1 
+AAU.584_04.010 LTCWHO4 Nursing home/assisted living would provide ADL help 864 1 
+AAU.584_05.010 LTCWHO5 Other would provide ADL help 865 1 
+AAU.600_00.010 AINDINS Tried to purchase health insurance directly, past 3 yrs 866 1 
+AAU.600_00.020 AINDPRCH Purchased health insurance directly, past 3 yrs 867 1 
+AAU.600_00.030 AINDWHO For whom was health insurance purchased, past 3 yrs 868 1 
+AAU.600_00.040 AINDDIF1 How difficult to find health insurance for coverage needed, past 3 yrs 869 1 
+AAU.600_00.050 AINDDIF2 How difficult to find affordable health insurance, past 3 yrs 870 1 
+AAU.600_01.060 AINDENY1 Turned down for coverage, past 3 yrs 871 1 
+AAU.600_02.060 AINDENY2 Charged higher price for coverage because of health, past 3 yrs 872 1 
+AAU.600_03.060 AINDENY3 Specific health problem excluded from coverage, past 3 yrs 873 1 
+AAU.601_01.070 AINDNOT1 Didn’t buy plan because turned down, past 3 yrs 874 1 
+AAU.601_02.070 AINDNOT2 Didn’t buy plan because of cost, past 3 yrs 875 1 
+AAU.601_03.070 AINDNOT3 Didn’t buy plan because of pre-existing condition, past 3 yrs 876 1 
+AAU.601_04.070 AINDNOT4 Didn’t buy plan because got health insurance from other source, past 3 yrs 877 1 
+AAU.601_05.070 AINDNOT5 Other reason didn't buy plan, past 3 yrs 878 1 
+AAU.605._00.010 AEXCHNG Looked into purchasing health insurance coverage through the Health Insurance Marketplace 879 1 
+NAF.032_00.000 SNONCE Used indoor tanning device during past 12 months 880 1 
+NAF.033_00.000 SNNUM1 Number of times used tanning device during past 12 months 881-883 3 
+NAF.130_00.000 PAPHAD1 Ever had Pap smear/Pap test 884 1 
+NAF.150_01.000 RPAP1_M1 Month of most recent Pap test 885-886 2 
+NAF.150_02.000 RPAP1_Y1 Year of most recent Pap test 887-890 4 
+NAF.160_01.000 RPAP1N1 Time ago date of most recent Pap test: # of units 891-892 2 
+NAF.160_02.000 RPAP1T1 Time ago date of most recent Pap test: Time unit 893 1 
+NAF.165_00.000 RPAP21 Most recent Pap test, time categories 894 1 
+XXX.999_99.000 RPAP3A1 Most recent Pap test, time categories (using 2005 method) 895 1 
+XXX.999_99.000 RPAP3B1 Most recent Pap test, time categories (using 2000 method) 896 1 
+NAF.170_00.000 PAPREA1 Main reason for most recent Pap test 897 1 
+NAF.215_00.000 MDRECP1 Doctor recommended Pap test 898 1 
+NAF.216_00.000 PAPWHEN When next Pap smear/test will be done 899-900 2 
+NAF.220_00.000 HYST Ever had a hysterectomy 901 1 
+NAF.230_00.000 MAMHAD Ever had a mammogram 902 1 
+NAF.260_01.000 RMAM1_MT Month of most recent mammogram 903-904 2 
+NAF.260_02.000 RMAM1_YR Year of most recent mammogram 905-908 4 
+NAF.270_01.000 RMAM1N Time ago date of most recent mammogram: # of units 909-910 2 
+NAF.270_02.000 RMAM1T Time ago date of most recent mammogram: Time unit 911 1 
+NAF.275_00.000 RMAM2 Most recent mammogram, time categories 912 1 
+XXX.999_99.000 RMAM3A Most recent mammogram, time categories (using 2005 method) 913 1 
+XXX.999_99.000 RMAM3B Most recent mammogram, time categories (using 2000 method) 914 1 
+NAF.310_00.000 MAMREAS Main reason for most recent mammogram 915 1 
+NAF.370_00.000 MDRECMAM Doctor recommended mammogram 916 1 
+NAF.427_00.000 PSAREC Doctor recommended a PSA test 917 1 
+NAF.430_00.000 PSAHAD Ever had a PSA test 918 1 
+NAF.440_00.000 RPSA1_MT Month of most recent PSA test 919-920 2 
+NAF.440_01.000 RPSA1_YR Year of most recent PSA test 921-924 4 
+NAF.440_02.000 RPSA1N Time ago date of most recent PSA test: # of units 925-926 2 
+NAF.440_03.000 RPSA1T Time ago date of most recent PSA test: Time unit 927 1 
+NAF.440_04.000 RPSA2 Most recent PSA test, time categories 928 1 
+XXX.999_99.000 RPSA3A Most recent PSA test, time categories (using 2005 method) 929 1 
+XXX.999_99.000 RPSA3B Most recent PSA test, time categories (using 2000 method) 930 1 
+NAF.441_00.000 PSAREAS Main reason for most recent PSA test 931 1 
+NAF.540_00.000 COLHAD Ever had a colonoscopy 932 1 
+NAF.560_01.000 COL_MT Month of most recent colonoscopy 933-934 2 
+NAF.560_02.000 COL_YR Year of most recent colonoscopy 935-938 4 
+NAF.570_01.000 COLN Time ago date of most recent colonoscopy: # of units 939-940 2 
+NAF.570_02.000 COLT Time ago date of most recent colonoscopy: Time unit 941 1 
+NAF.575_00.000 COL2 Most recent colonoscopy, time categories 942 1 
+XXX.999_99.000 COL3A Most recent colonoscopy, time categories (using 2005 method) 943 1 
+XXX.999_99.000 COL3B Most recent colonoscopy, time categories (using 2000 method) 944 1 
+NAF.590_00.000 COLREAS Main reason for most recent colonoscopy 945 1 
+NAF.591_00.000 SIGHAD Ever had a Sigmoidoscopy 946 1 
+NAF.592_01.000 SIG_MT Month of most recent Sigmoidoscopy 947-948 2 
+NAF.593_02.000 SIG_YR Year of most recent Sigmoidoscopy 949-952 4 
+NAF.594_01.000 SIGN Time ago date of most recent Sigmoidoscopy: # of units 953-954 2 
+NAF.595_02.000 SIGT Time ago date of most recent Sigmoidoscopy: Time unit 955 1 
+NAF.596_00.000 SIG2 Most recent Sigmoidoscopy, time categories 956 1 
+XXX.999_99.000 SIG3A Most recent Sigmoidoscopy, time categories (using 2005 method) 957 1 
+XXX.999_99.000 SIG3B Most recent Sigmoidoscopy, time categories (using 2000 method) 958 1 
+NAF.597_00.000 SIGREAS Main reason for most recent Sigmoidoscopy 959 1 
+NAF.620_00.000 HFOBHAD Had blood stool test using home test kit 960 1 
+NAF.640_01.000 RHFO1_MT Month of most recent home blood stool test 961-962 2 
+NAF.640_02.000 RHFO1_YR Year of most recent home blood stool test 963-966 4 
+NAF.650_01.000 RHFO1N Time ago date of most recent home blood stool test: # of units 967-968 2 
+NAF.650_02.000 RHFO1T Time ago date of most recent home blood stool test: Time unit 969 1 
+NAF.655_00.000 RHFO2 Most recent home blood stool test, time categories 970 1 
+XXX.999_99.000 RHFOB3A Most recent home blood stool test, time categories (using 2005 method) 971 1 
+XXX.999_99.000 RHFOB3B Most recent home blood stool test, time categories (using 2000 method) 972 1
+NAF.660_00.000 HFOBREA1 Main reason for most recent home blood stool test 973 1
+NAF.750_00.000 COLPROB1 Doctor recommended you be tested for colon/rectum problems, past 12 months 974 1
+ASI.130_00.000 ASICPUSE How often do you use a computer 975 1
+ASI.140_00.000 ASISATHC How satisfied with health care, past 12 mo 976 1
+ASI.150_00.000 ASITENUR Length of time living in neighborhood 977 1
+ASI.160_00.000 ASINHELP Agree/disagree…people in neighborhood help each other 978 1
+ASI.170_00.000 ASINCNTO Agree/disagree…people I count on in neighborhood 979 1
+ASI.180_00.000 ASINTRU Agree/disagree…people in neighborhood can be trusted 980 1
+ASI.190_00.000 ASINKNT Agree/disagree…close-knit neighborhood 981 1
+ASI.220_00.000 ASISIM How you think of yourself (sexual orientation; male) 982 1
+ASI.240_00.000 ASISIF How do you think of yourself (Sexual orientation; female) 983 1
+ASI.260_00.000 ASIRETR How worried are you about…money for retirement 984 1
+ASI.270_00.000 ASIMEDC How worried are you about…medical costs of illness/accident 985 1
+ASI.280_00.000 ASISTLV How worried are you about…maintaining standard of living 986 1
+ASI.290_00.000 ASICNHC How worried are you about…medical costs of healthcare 987 1
+ASI.300_00.000 ASICCOLL How worried are you about…paying for children's college 988 1
+ASI.310_00.000 ASINBILL How worried are you about…paying monthly bills 989 1
+ASI.320_00.000 ASIHCST How worried are you about…paying rent/mortgage/housing costs 990 1
+ASI.330_00.000 ASICCMP How worried are you about…credit card payments 991 1
+ASI.340_00.000 ASISLEEP Hours of sleep 992-993 2
+ASI.350_00.000 ASISLPFL # times having trouble falling asleep, past week 994-995 2
+ASI.360_00.000 ASISLPST # times having trouble staying asleep, past week 996-997 2
+ASI.370_00.000 ASISLPMD # times taking medication for sleep, past week 998-999 2
+ASI.380_00.000 ASIREST Days woke up feeling rested, past week 1000-1001 2
+ASI.390_01.000 ASISAD So sad nothing cheers you up, past 30 days 1002 1
+ASI.390_02.000 ASINERV How often felt nervous, past 30 days 1003 1
+ASI.390_03.000 ASIRSTLS How often restless/fidgety, past 30 days 1004 1
+ASI.390_04.000 ASIHOPLS How often felt hopeless, past 30 days 1005 1
+ASI.390_05.000 ASIEFFRT How often felt everything was an effort, past 30 days 1006 1
+ASI.390_06.000 ASIWTHLS How often felt worthless, past 30 days 1007 1
+ASI.400_00.000 ASIMUCH Feelings interfered w/ life, past 30 days 1008 1
+ASI.410_00.000 ASIHIVT Ever been tested for HIV 1009 1
+ASI.420_00.000 ASIHIVWN Main reason not tested for HIV 1010-1011 2 
+AWB.010_00.000 AWEBUSE Internet use 1012 1
+AWB.020_01.000 AWEBOFNO Frequency internet use: # of units 1013-1015 3 
+AWB.020_02.000 AWEBOFTP Frequency internet use: Time units 1016 1
+AWB.030_00.000 AWEBEML Email use 1017 1
+AWB.050_01.000 AWEBMNO Frequency email use: # of units 1018-1020 3 
+AWB.050_02.000 AWEBMTP Frequency email use: Time units 1021 1
