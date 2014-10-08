@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+
+		body {
+		  font: 10px sans-serif;
+		}
+
+		.axis path,
+		.axis line {
+		  fill: none;
+		  stroke: #000;
+		  shape-rendering: crispEdges;
+		}
+
+		.bar {
+		  fill: steelblue;
+		}
+
+		</style>
+	</head>
+	<body>
+		<!--script src="http://d3js.org/d3.v3.min.js"></script-->
+		<script src="d3.v3.js"></script>
+		<script>
+			var margin = {top: 20, right: 130, bottom: 30, left: 180},
+					width = 960 - margin.left - margin.right,
+					height = 600 - margin.top - margin.bottom;
+
+			var negWidth = width * -1;
+			var posWidth = width * 0.5;
+			var y0 = d3.scale.ordinal()
+					.rangeRoundBands([0, height], .275);
+
+			var y1 = d3.scale.ordinal();
+
+			var x = d3.scale.linear()
+					.range([0, width]);
+
+			var color = d3.scale.ordinal()
+					.range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+
+			var xAxis = d3.svg.axis()
+				.scale(x)
+				.orient("top");
+
+			var svg = d3.select("body").append("svg")
+					.attr("width", width + margin.left + margin.right)
+					.attr("height", height + margin.top + margin.bottom)
+					.append("g")
+					.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+			d3.csv("coefficients.csv", function(error, data) {
+				var modelNames = d3.keys(data[0]).filter(function (key) {
+					return key !== "Coefficient" && key != "value";
+				});
+
+				data.forEach(function (d) {
+					d.models = modelNames.map(function (name) {
+						return {name: name, value: +d[name]};
+					});
+				});
+
+				y0.domain(data.map(function (d) {
+					return d.Coefficient;
+				}));
+				y1.domain(modelNames).rangeRoundBands([0, y0.rangeBand()]);
+				var d3Min =    d3.min(data, function (d) {
+					return d3.min(d.models, function (d) {
+						return Math.max(-1, d.value * 1.15);
+					});
+				});
+				 var  d3Max =  d3.max(data, function (d) {
+					 return d3.max(d.models, function (d) {
+						 return Math.min(1, d.value * 1.15);
+					 });
+				 });
+
+
+				x.domain([ d3Min,d3Max ]);
+
+				var yAxisTransform =  width;
+				if(d3Min < 0 && 0 < d3Max) {
+					yAxisTransform = width * (d3Max / (d3Max -d3Min));
+				}
+	
+
+				var coef = svg.selectAll(".Coefficient")
+						.data(data)
+						.enter().append("g")
+						.attr("class", "g")
+						.attr("transform", function (d) {
+							return "translate(0, " + y0(d.Coefficient) + ")";
+						});
+						
+						  						  
+				coef.selectAll("rect")
+						.data(function (d) {
+							return d.models;
+						})
+						.enter().append("rect")
+						.attr("width", y1.rangeBand())
+						.attr("y", function (d) {
+							return y1(d.name);
+						})
+						.attr("x", function (d) {
+							return x(Math.min(0, d.value));
+						})
+						.attr("width", function (d) {
+							if(d.value < 0) {                    
+								 return width - x(d.value+d3Max);
+							}
+							return x(d.value+d3Min);
+						})
+						.attr("height", 14)
+						.style("fill", function (d) {
+							return color(d.name);
+						});
+
+						  
+				  svg.append("g")
+						.attr("class", "x axis")        
+						.call(xAxis)
+						.append("text")
+						.attr("transform", "rotate(-90)")
+						.attr("x", 6)
+						.attr("dx", ".71em")
+						.style("text-anchor", "end");
+						
+				  svg.append("g")
+					  .attr("class", "y axis")
+					.append("line")
+					  .attr("x1", x(0))
+					  .attr("x2", x(0))
+					  .attr("y2", height)
+					  .text("Coefficient");
+
+
+
+			  var legend = svg.selectAll(".legend")
+				  .data(modelNames.slice())
+				.enter().append("g")
+				  .attr("class", "legend")
+				  .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+			  legend.append("rect")
+				  .attr("x", width + 20)
+				  .attr("width", 18)
+				  .attr("height", 18)
+				  .style("fill", color);
+
+			  legend.append("text")
+				  .attr("x", width + 42)
+				  .attr("y", 9)
+				  .attr("dy", ".35em")
+				  .style("text-anchor", "start")
+				  .text(function(d) { return d; });
+
+			var labels = svg.selectAll(".label")
+				.data(data)
+				.enter()
+				.append("g")
+				.attr("class", "label")
+				.attr("transform", function(d, i) { return "translate(0," + (14 + (i * 38)) + ")"; });
+
+			  labels.append("text")
+				  .attr("x", -15)
+				  .attr("y", margin["top"])
+				  .attr("dy", "-.35em")
+				  .style("text-anchor", "end")
+				  .text(function(d) { return d.Coefficient; });			
+			});
+		</script>
+	</body>
+</html>
