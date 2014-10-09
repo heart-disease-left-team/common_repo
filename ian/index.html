@@ -1,0 +1,326 @@
+<!-- <!DOCTYPE html> -->
+<meta charset="utf-8">
+<style>
+
+body {
+  font: 15px sans-serif;
+}
+
+table {
+    table-layout: fixed;
+}
+
+.bar rect {
+  shape-rendering: crispEdges;
+}
+
+.bar text {
+  fill: black;
+  font: 20px sans-serif;
+  text-anchor: middle;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+    fill: black;
+    font: 20px sans-serif;
+
+</style>
+
+<script>
+function show_value(x, v) {
+ var str = "slider_value_" + v
+ document.getElementById(str).innerHTML=x;
+}
+</script>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<!-- <script src="d3.min.js"></script> -->
+
+<body>
+
+<!-- The big input table -->
+</table>
+<table style="width: 960px">
+<tr align="center", valign="top">
+    <td>
+        <p><b>DOLLAR BASIS</b><br><br>
+        For those not expected to develop heart disease 
+        <br><br>
+        Annual Medical Expenses ($): <input type="number" name="ann_cost" id="acost" value=1400 step=50 min=0>
+        <br><br>
+        Annual Plan Fee ($):   <input type="number" name="ann_income" id="afee" value=2000 step=50 min=0>
+    <td>
+        <p><b>EXPENSE RATIO</b> <br><br>
+         Ratio of medical expenses per customer 
+        with / without heart disease:<br> </p>
+        <p>
+        <span id="slider_value_cost_ratio" style="color:black;"></span><br>
+        </p>
+        1 <input type="range" min="1" max="40" step="0.5" value="4" name="sld_cost_ratio" id="ncost_ratio" onchange="show_value(this.value, 'cost_ratio')"> 40 
+        </p>
+    </td>
+    <td>
+        <p><b>PLAN FEE RATIO</b><br><br>
+        Ratio of plan fee charged customer 
+        with / without heart disease:<br> </p>
+        <p>
+        <span id="slider_value_income_ratio" style="color:black;"></span><br>
+        </p>
+        1 <input type="range" min="1" max="40" step="0.5" value="4" name="sld_income_ratio" id="nincome_ratio" onchange="show_value(this.value, 'income_ratio')"> 40 
+        </p>
+    </td>
+    <td>
+        <p><b>ACCEPT RATIO</b><br><br>
+        Proportion of those labeled with 
+        with heart disease who stay with us:<br>
+        </p>
+        <p>
+        <span id="slider_value_accept_ratio" style="color:black;"></span><br>
+        </p>
+        0 <input type="range" min="0" max="1" step="0.05" value="0.2" name="sld_accept_ratio" id="naccept_ratio" onchange="show_value(this.value, 'accept_ratio')"> 1 
+        </p>
+    </td>
+</tr>
+</table>
+<br>
+<br>
+<!-- Get inital slider values to show up -->
+<script>
+</script>
+
+<!-- Functions to recreate the dataset with new parameters -->
+<script> 
+
+function calcpmargin(r0, r1, cost_ratio, income_ratio, accept_ratio, income, expense) {
+    <!-- var income_ratio = 5 //Ratio of plan cost (income) for those labeled positive to those negative -->    
+    <!-- var cost_ratio = 4 //Ratio of expenses_hd / expenses_nohd -->
+    <!-- var accept_ratio = 0.2 // Accept ratio of those labeled positive (charged more) -->
+
+    <!-- var income = 2000 //Cost (in $) of basic plan (for those model identifies as negative) -->
+    <!-- var expense = 1400 //Cost (in $) to company of those who do not develop heart disease -->
+
+    // Calculate expenses and revenue for each possible scenario.
+    // Note -- these really should be multiplied by N, the total
+    // number of people. Since these divide out later, I'm skipping that.
+    var TP_revenue = accept_ratio*income_ratio*income*0.05*r1;
+    var TP_expense = accept_ratio*cost_ratio*expense*0.05*r1;
+
+    var FP_revenue = accept_ratio*income_ratio*income*0.95*r0;
+    var FP_expense = accept_ratio*expense*0.95*r0;
+
+    var TN_revenue = income*0.95*(1 - r0);
+    var TN_expense = expense*0.95*(1 - r0);
+
+    var FN_revenue = income*0.05*(1 - r1);
+    var FN_expense = cost_ratio*expense*0.05*(1 - r1);
+
+    var total_revenue = TP_revenue + FP_revenue + TN_revenue + FN_revenue;
+    var total_cost = TP_expense + FP_expense + TN_expense + FN_expense;
+
+    return (total_revenue - total_cost); ///total_revenue
+    }
+
+function nomodelinfo(cost_ratio, income, expense) {
+        <!-- var income = 2000; -->
+        <!-- var expense = 1400; -->
+        var revenue = income;
+        return revenue - 0.95*expense - 0.05*cost_ratio*expense;
+    }  
+
+
+function createdata(cost_ratio, income_ratio, accept_ratio, income, expense) {
+    var nomodel = nomodelinfo(cost_ratio, income, expense);
+    var mode = calcpmargin(0.99, 0.48, cost_ratio, income_ratio, accept_ratio, income, expense);
+    var log= calcpmargin(0.99, 0.39, cost_ratio, income_ratio, accept_ratio, income, expense);
+    var gnb= calcpmargin(0.92, 0.69, cost_ratio, income_ratio, accept_ratio, income, expense);
+    var svc= calcpmargin(0.99, 0.46, cost_ratio, income_ratio, accept_ratio, income, expense);
+    data = [
+            {name: "NONE",      margin: nomodel},
+            {name: "Mode()",    margin: mode},
+            {name: "Log",       margin: log},
+            {name: "GNB",       margin: gnb},
+            {name: "SVC",       margin: svc},
+            ];
+    return data;
+    }
+
+</script>
+
+<!-- Actually draw the graphic -->
+<script> 
+// A formatter for counts.
+var formatCount = d3.format(",.0f");
+
+var margin = {top: 10, right: 30, bottom: 30, left: 70},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+    barwidth = 40;
+    barpadding = 10;
+    min_yscale = -4000
+    max_yscale = 20000;
+    
+// Get initial values from sliders / number fields and create inital data set
+var cost_ratio_initial = document.getElementById("ncost_ratio").value;
+var income_ratio_initial = document.getElementById("nincome_ratio").value;
+var accept_ratio_initial = document.getElementById("naccept_ratio").value;
+var income_initial = document.getElementById("afee").value;
+var expense_initial = document.getElementById("acost").value;
+var data_z1 = createdata(cost_ratio_initial, income_ratio_initial, accept_ratio_initial, income_initial, expense_initial)
+
+// Needed to get inital slider / field values to show up
+show_value(cost_ratio_initial, 'cost_ratio');
+show_value(income_ratio_initial, 'income_ratio');
+show_value(accept_ratio_initial, 'accept_ratio');
+
+
+var x = d3.scale.ordinal()
+    .domain(["NONE", "Mode()", "Log", "GNB", "SVC"])
+    .rangeBands([0, width], .2);
+
+var y = d3.scale.linear()
+    .domain([min_yscale, max_yscale])
+    .range([height, 0]);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+var bar = svg.selectAll(".bar")
+    .data(data_z1)
+  .enter().append("g")
+    .attr("class", "bar")
+    .attr("transform", function(d) { return "translate(" + x(d.name) + ", 0)"; });
+
+bar.append("rect")
+    .attr("y", function(d) { return y(Math.max(0, d.margin)); })
+    .attr("height", function(d) { return Math.abs(y(d.margin) - y(0)); })
+    .attr("width", x.rangeBand())
+    .attr("fill", function(d) {
+                if (d.margin < 0) {
+                    return "darkred";
+                }
+                if (d.margin < max_yscale) {
+                    return "steelblue";
+                }
+                if (d.margin > max_yscale) {
+                    return "darkblue";
+                }
+            });
+
+bar.append("text")
+    <!-- .attr("dy", "-2.00em") -->
+    .attr("y", function(d) { return y(min_yscale); })
+    <!-- .attr("y", function(d) { return y(Math.max(0, d.margin)); }) -->
+    .attr("x", x.rangeBand() / 2) 
+    .text(function(d) { return '$' + Math.round(d.margin*100)/100; });
+
+svg.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + y(0) + ")")
+    .call(xAxis)
+    .selectAll("text")
+    .attr("dy", "4.5em");
+
+svg.append("g")
+    .attr("class", "y axis")
+    .call(yAxis);
+
+<!-- Now do all of the transition stuff -->
+
+d3.select("#ncost_ratio").on("input", function() {
+        var income_ratio = document.getElementById("nincome_ratio").value;
+        var accept_ratio = document.getElementById("naccept_ratio").value;
+        var income = document.getElementById("afee").value;
+        var expense = document.getElementById("acost").value;
+        update(+this.value, income_ratio, accept_ratio, income, expense);
+        });
+
+d3.select("#nincome_ratio").on("input", function() {
+        var cost_ratio = document.getElementById("ncost_ratio").value;
+        var accept_ratio = document.getElementById("naccept_ratio").value;
+        var income = document.getElementById("afee").value;
+        var expense = document.getElementById("acost").value;
+        update(cost_ratio, +this.value, accept_ratio, income, expense);
+        });
+
+d3.select("#naccept_ratio").on("input", function() {
+        var cost_ratio = document.getElementById("ncost_ratio").value;
+        var income_ratio = document.getElementById("nincome_ratio").value;
+        var income = document.getElementById("afee").value;
+        var expense = document.getElementById("acost").value;
+        update(cost_ratio, income_ratio, +this.value, income, expense);
+        });
+
+d3.select("#afee").on("input", function() {
+        var cost_ratio = document.getElementById("ncost_ratio").value;
+        var income_ratio = document.getElementById("nincome_ratio").value;
+        var accept_ratio = document.getElementById("naccept_ratio").value;
+        var expense = document.getElementById("acost").value;
+        update(cost_ratio, income_ratio, accept_ratio, +this.value, expense);
+        });
+
+d3.select("#acost").on("input", function() {
+        var cost_ratio = document.getElementById("ncost_ratio").value;
+        var income_ratio = document.getElementById("nincome_ratio").value;
+        var accept_ratio = document.getElementById("naccept_ratio").value;
+        var income = document.getElementById("afee").value;
+        update(cost_ratio, income_ratio, accept_ratio, income, +this.value);
+        });
+
+// Transition helpers
+function update(cost_ratio, income_ratio, accept_ratio, income, expense) {
+    // handle updating cost_ratio values
+    var data_new = createdata(cost_ratio, income_ratio, accept_ratio, income, expense);
+    updatebars(data_new);
+    }
+
+function updatebars(data_new) {
+    <!-- // actually update the bars and text on plot -->
+    svg.selectAll("rect")
+        .data(data_new)
+        .transition()
+        .duration(500)
+        .attr("y", function(d) { return y(Math.max(0, d.margin)); })
+        .attr("height", function(d) { return Math.abs(y(d.margin) - y(0)); })
+        .attr("fill", function(d) {
+            if (d.margin < 0) {
+                return "darkred";
+            }
+            if (d.margin >= 0) {
+                if (d.margin < max_yscale) {
+                    return "steelblue";
+                }
+                if (d.margin > max_yscale) {
+                    return "darkblue";
+                }
+            }
+            });
+    
+        svg.selectAll("text")
+            .data(data_new)
+            .transition()
+            .duration(500)
+            <!-- .attr("y", function(d) { return y(Math.max(0, d.margin)); }) -->
+            .attr("x", x.rangeBand() / 2) 
+            .text(function(d) { return '$' + Math.round(d.margin*100)/100; });
+    }
+
+</script>
+
