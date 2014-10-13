@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Bar Chart with Negative Values</title>
+<style>
+
+.bar.positive {
+  fill: indianred;
+}
+
+.bar.negative {
+  fill: lightsteelblue;
+}
+
+.barg {
+font: 14px sans-serif;
+}
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis line {
+  stroke: #fff;
+  stroke-opacity: .8;
+}
+  
+
+</style>
+<body>
+
+<h1><font face="sans-serif">Chance for heart disease by state: Z scores</font></h1>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+var margin = {top: 30, right: 10, bottom: 10, left: 10},
+    width = 960 - margin.left - margin.right,
+    height = 1000 - margin.top - margin.bottom;
+
+var x = d3.scale.linear()
+    .range([0, width])
+
+var y = d3.scale.ordinal()
+    .rangeRoundBands([0, height], .2);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("top")
+    .innerTickSize(-height);
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+d3.tsv("sortedresults.tsv", type, function(error, data) {
+  x.domain(d3.extent(data, function(d) { return d.value; })).nice();
+  y.domain(data.map(function(d) { return d.field; }));
+
+  var barg = svg.selectAll(".bar")
+              .data(data)
+              .enter().append("g")
+              .attr("class","barg");
+    
+    
+    barg.append("rect")
+      .attr("class", function(d) { return d.value < 0 ? "bar negative" : "bar positive"; })
+      .attr("x", function(d) { return x(Math.min(0, d.value)); })
+      .attr("y", function(d) { return y(d.field); })
+      .attr("width", function(d) { return Math.abs(x(d.value) - x(0)); })
+      .attr("height", y.rangeBand());
+      
+    barg.append("text")
+      .attr("x", function(d) { 
+                                if( d.value < 0) {
+                                   return x(0.1);
+                                }
+                                else {
+                                   return x(-0.1);
+                                }
+                              })
+      .attr("y", function(d) { return y(d.field)+7; })
+      .attr("dy", ".35em")
+      .style("text-anchor", function(d) { 
+                                if( d.value < 0) {
+                                   return "start";
+                                }
+                                else {
+                                   return "end";
+                                }
+                              })
+      .attr("startOffset", function(d) { 
+                                if( d.value < 0) {
+                                   return "0%";
+                                }
+                                else {
+                                   return "100%";
+                                }
+                              })
+      .style("fill","gray")
+      .text(function(d) { return d.field; });
+
+    barg.append("text")
+      .attr("x", function(d) { 
+                        if(d.value < 0 ) {
+                          return x(d.value) - 5;
+                        }
+                        else {
+                          return x(d.value) + 5;
+                        }
+                      })                      
+      .attr("y", function(d) { return y(d.field)+7; })
+      .attr("dy", ".35em")
+      .style("text-anchor", function(d) { 
+                                if( d.value < 0) {
+                                   return "end";
+                                }
+                                else {
+                                   return "start";
+                                }
+                              })
+      .attr("startOffset", function(d) { 
+                                if( d.value < 0) {
+                                   return "100%";
+                                }
+                                else {
+                                   return "0%";
+                                }
+                              })
+      .style("visibility","hidden")
+      .text(function(d) { return d3.round(d.value,2); });
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .call(xAxis)
+    .append("text")
+      //.attr("transform", "rotate(-90)")
+      .attr("x", x(2.5))
+      .attr("dy", ".89em")
+      .style("text-anchor", "end")
+      .text("Z scores");
+
+  svg.append("g")
+      .attr("class", "y axis")
+    .append("line")
+      .attr("x1", x(0))
+      .attr("x2", x(0))
+      .attr("y2", height);
+      
+      
+function showneg() {
+    d3.select(this)
+    .style("fill", "steelblue");
+    
+    d3.select(this.nextSibling)
+    //.transition()
+    //.ease("elastic")
+    //.delay(10)
+    //.duration(10000)
+    .style("fill", "black")
+    .style("font-weight","bold");
+    
+    d3.select(this.nextSibling.nextSibling)
+    .style("visibility","visible");
+}
+
+function showpos() {
+    d3.select(this)
+    .style("fill", "firebrick");
+    
+    d3.select(this.nextSibling)
+    //.transition()
+    //.ease("elastic")
+    //.delay(10)
+    //.duration(10000)
+    .style("fill", "black")
+    .style("font-weight","bold");
+    
+    d3.select(this.nextSibling.nextSibling)
+    .style("visibility","visible");
+}
+
+function hideneg() {
+    d3.select(this)
+    .style("fill", "lightsteelblue");
+    
+    d3.select(this.nextSibling)
+    .style("font-weight","normal")
+    .style("fill","gray");
+    
+    d3.select(this.nextSibling.nextSibling)
+    .style("visibility","hidden");
+}
+
+function hidepos() {
+    d3.select(this)
+    .style("fill", "indianred");
+    
+    d3.select(this.nextSibling)
+    //.transition()
+    //.ease("elastic")
+    //.delay(10)
+    //.duration(10000)    
+    .style("font-weight","normal")
+    .style("fill","gray");
+    
+    d3.select(this.nextSibling.nextSibling)
+    .style("visibility","hidden");
+}
+
+d3.selectAll(".bar.negative")
+    .on("mouseover", showneg)
+    .on("mouseout", hideneg);
+
+d3.selectAll(".bar.positive")
+    .on("mouseover", showpos)
+    .on("mouseout", hidepos);
+    
+
+
+});
+
+function type(d) {
+  d.value = +d.value;
+  return d;
+}
+
+</script>
